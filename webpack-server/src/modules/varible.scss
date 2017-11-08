@@ -1,0 +1,7 @@
+$color-r:#666;
+
+$colors: lightblue, blue, darkblue, blueviolet;
+
+ul li:first-child {
+ background: nth($colors, 1);
+}

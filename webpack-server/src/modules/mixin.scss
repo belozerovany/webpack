@@ -1,0 +1,34 @@
+@mixin round($radius:20px) {
+  border-radius: $radius;
+}
+
+@mixin triangle( $direction: "up"){
+  content: '';
+  display: block;
+  width:0;
+  height:0;
+  $color:red;
+  $size: 10px;
+
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: $size;
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom:  $size;
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: $size;
+  } @else if  $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: $size;
+  }
+}

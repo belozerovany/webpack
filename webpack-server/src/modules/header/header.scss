@@ -1,0 +1,31 @@
+@import "../varible";
+@import "../function";
+@import "../mixin";
+
+.header{
+    background: getDarken(#f5f5f5);
+    color:$color-r;
+    font-size: getPart(22,10);
+    @include round;
+    position: relative;
+    &:after{
+        @include triangle("left");
+    }
+}
+
+@for $i from 1 through 10 {
+    .item#{$i} { width: 10% * $i;@include round(80); }
+}
+
+ul {
+    @for $i from 1 through 20 {
+        li:nth-child(#{$i}) {
+            background: rgb(255-$i*5, 153*$i, 51);
+            width:$i*20px;
+            height: $i+20px;
+            @include round;
+            margin: $i+4px;
+
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@function getPart($num, $pros) {
+    @return $num * ($pros/100);
+};
+
+@function getDarken($color) {
+    @return darken($color, 20%);
+}
+

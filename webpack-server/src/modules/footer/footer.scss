@@ -1,0 +1,11 @@
+$color-grey:#333;
+$font-size: 14px;
+
+.footer{
+    background: $color-grey;
+    padding: 5px;
+    font-size: $font-size;
+    a {
+        font-size: $font-size -2 ;
+    }
+}
